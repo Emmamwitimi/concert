@@ -20,7 +20,7 @@ class Band(Base):
     def __repr__(self):
         return f"Band {self.id}: {self.name}, hometown {self.hometown}"
 
-    def concerts(self):
+    def get_concerts(self):
         return self.concerts
     
     def venues(self):
@@ -41,7 +41,7 @@ class Venue(Base):
     def __repr__(self):
         return f"Venue {self.id}: {self.title}, city {self.city}"
 
-    def concerts(self):
+    def get_concerts(self):
         return self.concerts
     
     def bands(self):
@@ -64,9 +64,9 @@ class Concert(Base):
     def __repr__(self):
         return f"Concert {self.id}: Band {self.band_id}, Venue {self.venue_id}"
 
-    def band(self):
+    def get_band(self):
         return self.band
-    def venue(self):
+    def get_venue(self):
         return self.venue
 
 
